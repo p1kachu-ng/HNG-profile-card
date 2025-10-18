@@ -20,6 +20,15 @@
             class="avatar-img"
             data-testid="test-user-avatar"
           />
+          <button class="upload-btn" aria-label="Change profile picture">
+            <i class="fa fa-plus"></i>
+          </button>
+          <input
+            type="file"
+            accept="image/*"
+            class="file-input"
+            style="display: none"
+          />
         </figure>
 
         <div class="profile-info">
@@ -102,43 +111,6 @@
       </div>
     </article>
 
-    <script>
-      // Update time in ms every second
-      const timeElement = document.querySelector(
-        '[data-testid="test-user-time"]'
-      );
-      function updateTime() {
-        const now = Date.now();
-        timeElement.textContent = now;
-      }
-      updateTime();
-      setInterval(updateTime, 1000);
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const socialLinks = document.querySelectorAll(".social-link");
-
-        // Keyboard nav accessibility for social links
-        socialLinks.forEach((link) => {
-          link.addEventListener("keydown", function (e) {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              this.click();
-            }
-          });
-        });
-
-        // Animation on page load
-        const profileCard = document.querySelector(".profile-card");
-        profileCard.style.opacity = "0";
-        profileCard.style.transform = "translateY(1.5rem)";
-
-        setTimeout(() => {
-          profileCard.style.transition =
-            "opacity 0.5s ease, transform 0.5s ease";
-          profileCard.style.opacity = "1";
-          profileCard.style.transform = "translateY(0)";
-        }, 100);
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -48,6 +48,8 @@ body {
 .avatar-container {
   flex: 0 0 11rem;
   margin-right: 2rem;
+  position: relative;
+  display: inline-block;
 }
 .avatar-img {
   width: 11rem;
@@ -61,6 +63,37 @@ body {
 .profile-info {
   flex: 1;
 }
+
+.upload-btn {
+  position: absolute;
+  top: 40%;
+  left: 43%;
+  color: #fff;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.avatar-container:hover .upload-btn {
+  opacity: 1;
+}
+
+.upload-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.upload-btn i {
+  font-size: 16px;
+}
+
 .user-name {
   font-size: 2rem;
   margin-bottom: 0.75rem;
