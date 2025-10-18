@@ -66,20 +66,22 @@ body {
 
 .upload-btn {
   position: absolute;
-  top: 40%;
-  left: 43%;
+  bottom: 55%; /* Keep it at the bottom edge */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, 50%); /* Move slightly outside the avatar circle */
   color: #fff;
   background-color: var(--secondary-color);
-  border: none;
+  border: 3px solid var(--primary-color);
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, opacity 0.3s ease;
   opacity: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .avatar-container:hover .upload-btn {
@@ -87,11 +89,11 @@ body {
 }
 
 .upload-btn:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 .upload-btn i {
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 
 .user-name {
@@ -200,5 +202,11 @@ span {
   .info-sections {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  .upload-btn {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-width: 2px;
+    transform: translate(-50%, 40%);
   }
 }
