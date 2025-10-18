@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P1kachu Senpai - Profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <article class="profile-card" data-testid="test-profile-card">
+      <div class="card-content">
+        <figure class="avatar-container">
+          <img
+            src="https://avatars.githubusercontent.com/u/70887636?v=4"
+            alt="Portrait of P1kachu Senpai"
+            class="avatar-img"
+            data-testid="test-user-avatar"
+          />
+        </figure>
+
+        <div class="profile-info">
+          <h1 class="user-name" data-testid="test-user-name">P1kachu Senpai</h1>
+          <p class="user-bio" data-testid="test-user-bio">
+            A passionate developer and tech enthusiast who loves to explore new
+            technologies and share knowledge with the community.
+          </p>
+          <span>time (ms):</span>
+          <p class="user-time" data-testid="test-user-time"></p>
+
+          <nav class="social-section" aria-label="Social media profiles">
+            <h2 class="section-title">Let's Connect</h2>
+            <ul class="social-links" data-testid="test-user-social-links">
+              <li>
+                <a
+                  href="https://emmanueledoh.netlify.app/"
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit p1kachu-ng website"
+                  data-testid="test-user-social-website"
+                >
+                  <i class="fas fa-globe"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/p1kachu-ng"
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit p1kachu-ng GitHub profile"
+                  data-testid="test-user-social-github"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/emmanueledoh/"
+                  class="social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit p1kachu-ng LinkedIn profile"
+                  data-testid="test-user-social-linkedin"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="info-sections">
+            <section class="info-section">
+              <h2 class="section-title">Hobbies</h2>
+              <ul class="info-list tags" data-testid="test-user-hobbies">
+                <li class="info-item">Reading</li>
+                <li class="info-item">Photography</li>
+                <li class="info-item">Football</li>
+                <li class="info-item">Cooking</li>
+                <li class="info-item">Traveling</li>
+              </ul>
+            </section>
+
+            <section class="info-section">
+              <h2 class="section-title">Dislikes</h2>
+              <ul
+                class="info-list tags dislikes"
+                data-testid="test-user-dislikes"
+              >
+                <li class="info-item">Traffic</li>
+                <li class="info-item">Spiders</li>
+                <li class="info-item">Loud Noises</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <script>
+      // Update time in ms every second
+      const timeElement = document.querySelector(
+        '[data-testid="test-user-time"]'
+      );
+      function updateTime() {
+        const now = Date.now();
+        timeElement.textContent = now;
+      }
+      updateTime();
+      setInterval(updateTime, 1000);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const socialLinks = document.querySelectorAll(".social-link");
+
+        // Keyboard nav accessibility for social links
+        socialLinks.forEach((link) => {
+          link.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              this.click();
+            }
+          });
+        });
+
+        // Animation on page load
+        const profileCard = document.querySelector(".profile-card");
+        profileCard.style.opacity = "0";
+        profileCard.style.transform = "translateY(1.5rem)";
+
+        setTimeout(() => {
+          profileCard.style.transition =
+            "opacity 0.5s ease, transform 0.5s ease";
+          profileCard.style.opacity = "1";
+          profileCard.style.transform = "translateY(0)";
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
