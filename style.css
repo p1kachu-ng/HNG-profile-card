@@ -66,9 +66,9 @@ body {
 
 .upload-btn {
   position: absolute;
-  bottom: 55%; /* Positioned 55% from the bottom, closer to the middle */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, 50%); /* Move slightly outside the avatar circle */
+  bottom: 55%;
+  left: 50%;
+  transform: translate(-50%, 50%);
   color: #fff;
   background-color: var(--secondary-color);
   border: 3px solid var(--primary-color);
