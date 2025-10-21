@@ -11,105 +11,128 @@
     />
   </head>
   <body>
-    <article class="profile-card" data-testid="test-profile-card">
-      <div class="card-content">
-        <figure class="avatar-container">
-          <img
-            src="https://avatars.githubusercontent.com/u/70887636?v=4"
-            alt="Portrait of P1kachu Senpai"
-            class="avatar-img"
-            data-testid="test-user-avatar"
-          />
-          <button class="upload-btn" aria-label="Change profile picture">
-            <i class="fa fa-plus"></i>
-          </button>
-          <input
-            type="file"
-            accept="image/*"
-            class="file-input"
-            style="display: none"
-          />
-        </figure>
+    <nav class="main-nav" data-testid="test-main-nav">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">P1kachu</a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Profile</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+    <main class="main-content">
+      <article class="profile-card" data-testid="test-profile-card">
+        <div class="card-content">
+          <figure class="avatar-container">
+            <img
+              src="https://avatars.githubusercontent.com/u/70887636?v=4"
+              alt="Portrait of P1kachu Senpai"
+              class="avatar-img"
+              data-testid="test-user-avatar"
+            />
+            <button class="upload-btn" aria-label="Change profile picture">
+              <i class="fa fa-plus"></i>
+            </button>
+            <input
+              type="file"
+              accept="image/*"
+              class="file-input"
+              style="display: none"
+            />
+          </figure>
 
-        <div class="profile-info">
-          <h1 class="user-name" data-testid="test-user-name">P1kachu Senpai</h1>
-          <p class="user-bio" data-testid="test-user-bio">
-            A passionate developer and tech enthusiast who loves to explore new
-            technologies and share knowledge with the community.
-          </p>
-          <span>time (ms):</span>
-          <p class="user-time" data-testid="test-user-time"></p>
+          <div class="profile-info">
+            <h1 class="user-name" data-testid="test-user-name">
+              P1kachu Senpai
+            </h1>
+            <p class="user-bio" data-testid="test-user-bio">
+              A passionate developer and tech enthusiast who loves to explore
+              new technologies and share knowledge with the community.
+            </p>
+            <span>time (ms):</span>
+            <p class="user-time" data-testid="test-user-time"></p>
 
-          <nav class="social-section" aria-label="Social media profiles">
-            <h2 class="section-title">Let's Connect</h2>
-            <ul class="social-links" data-testid="test-user-social-links">
-              <li>
-                <a
-                  href="https://emmanueledoh.netlify.app/"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit p1kachu-ng website"
-                  data-testid="test-user-social-website"
-                >
-                  <i class="fas fa-globe"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/p1kachu-ng"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit p1kachu-ng GitHub profile"
-                  data-testid="test-user-social-github"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
+            <nav class="social-section" aria-label="Social media profiles">
+              <h2 class="section-title">Let's Connect</h2>
+              <ul class="social-links" data-testid="test-user-social-links">
+                <li>
+                  <a
+                    href="https://emmanueledoh.netlify.app/"
+                    class="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit p1kachu-ng website"
+                    data-testid="test-user-social-website"
+                  >
+                    <i class="fas fa-globe"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/p1kachu-ng"
+                    class="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit p1kachu-ng GitHub profile"
+                    data-testid="test-user-social-github"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </li>
 
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/emmanueledoh/"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Visit p1kachu-ng LinkedIn profile"
-                  data-testid="test-user-social-linkedin"
-                >
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="info-sections">
-            <section class="info-section">
-              <h2 class="section-title">Hobbies</h2>
-              <ul class="info-list tags" data-testid="test-user-hobbies">
-                <li class="info-item">Reading</li>
-                <li class="info-item">Photography</li>
-                <li class="info-item">Football</li>
-                <li class="info-item">Cooking</li>
-                <li class="info-item">Traveling</li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/emmanueledoh/"
+                    class="social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit p1kachu-ng LinkedIn profile"
+                    data-testid="test-user-social-linkedin"
+                  >
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </li>
               </ul>
-            </section>
+            </nav>
 
-            <section class="info-section">
-              <h2 class="section-title">Dislikes</h2>
-              <ul
-                class="info-list tags dislikes"
-                data-testid="test-user-dislikes"
-              >
-                <li class="info-item">Traffic</li>
-                <li class="info-item">Spiders</li>
-                <li class="info-item">Loud Noises</li>
-              </ul>
-            </section>
+            <div class="info-sections">
+              <section class="info-section">
+                <h2 class="section-title">Hobbies</h2>
+                <ul class="info-list tags" data-testid="test-user-hobbies">
+                  <li class="info-item">Reading</li>
+                  <li class="info-item">Photography</li>
+                  <li class="info-item">Football</li>
+                  <li class="info-item">Cooking</li>
+                  <li class="info-item">Traveling</li>
+                </ul>
+              </section>
+
+              <section class="info-section">
+                <h2 class="section-title">Dislikes</h2>
+                <ul
+                  class="info-list tags dislikes"
+                  data-testid="test-user-dislikes"
+                >
+                  <li class="info-item">Traffic</li>
+                  <li class="info-item">Spiders</li>
+                  <li class="info-item">Loud Noises</li>
+                </ul>
+              </section>
+            </div>
           </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </main>
+
+    <footer class="main-footer">
+      <p>&copy; 2025 P1kachu. All rights reserved.</p>
+    </footer>
 
     <script src="./script.js"></script>
   </body>
